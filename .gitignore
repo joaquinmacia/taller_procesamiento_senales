@@ -1,0 +1,3 @@
+# Ignorar archivo de modelo preentrenado FastText
+guia_3/recursos/test_gitignore.txt
+guia_3/recursos/cc.en.300.bin
