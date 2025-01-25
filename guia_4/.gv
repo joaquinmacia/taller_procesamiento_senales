@@ -24,10 +24,10 @@ Deterministic" shape=box]
 		label=30 labeljust=r labelloc=b style=rounded
 	}
 	subgraph cluster1748 {
-		goles_visitante_obs [label="goles_visitante_obs
+		goles_local_obs [label="goles_local_obs
 ~
 Poisson" shape=ellipse style=filled]
-		goles_local_obs [label="goles_local_obs
+		goles_visitante_obs [label="goles_visitante_obs
 ~
 Poisson" shape=ellipse style=filled]
 		label=1748 labeljust=r labelloc=b style=rounded
