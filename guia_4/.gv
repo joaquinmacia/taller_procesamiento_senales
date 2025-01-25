@@ -1,0 +1,44 @@
+digraph {
+	ventaja_localia [label="ventaja_localia
+~
+Flat" shape=ellipse]
+	tau_ataque [label="tau_ataque
+~
+Gamma" shape=ellipse]
+	tau_defensa [label="tau_defensa
+~
+Gamma" shape=ellipse]
+	subgraph cluster30 {
+		ataque_inicial [label="ataque_inicial
+~
+Normal" shape=ellipse]
+		defensa_inicial [label="defensa_inicial
+~
+Normal" shape=ellipse]
+		defensa [label="defensa
+~
+Deterministic" shape=box]
+		ataque [label="ataque
+~
+Deterministic" shape=box]
+		label=30 labeljust=r labelloc=b style=rounded
+	}
+	subgraph cluster1748 {
+		goles_visitante_obs [label="goles_visitante_obs
+~
+Poisson" shape=ellipse style=filled]
+		goles_local_obs [label="goles_local_obs
+~
+Poisson" shape=ellipse style=filled]
+		label=1748 labeljust=r labelloc=b style=rounded
+	}
+	tau_ataque -> ataque_inicial
+	tau_defensa -> defensa_inicial
+	ataque_inicial -> ataque
+	defensa_inicial -> defensa
+	ventaja_localia -> goles_local_obs
+	ataque -> goles_local_obs
+	defensa -> goles_local_obs
+	ataque -> goles_visitante_obs
+	defensa -> goles_visitante_obs
+}
